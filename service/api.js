@@ -17,6 +17,7 @@ export const Api = () => {
     });
 
     const [state, dispatch] = useReducer(AuthReducer, initialState);
+
     useEffect(() => {
         const tk = getcookie('token');
         if (tk) {
@@ -79,12 +80,14 @@ export const Api = () => {
 
             GET: async (url, isToken = false, contentType = 'application/json', responseType = 'json') => {
                 try {
+                    let tk = getcookie('token');
+                    let dataParsed = JSON.parse(tk);
                     return instance.get(
                         url,
                         isToken
                             ? {
                                   headers: {
-                                      Authorization: `Bearer ${state.userToken}`,
+                                      Authorization: `Bearer ${dataParsed}`,
                                       'Content-Type': contentType,
                                   },
                                   responseType,
@@ -102,13 +105,15 @@ export const Api = () => {
 
             POST: async (url, isToken = false, data, contentType = 'application/json', responseType = 'json') => {
                 try {
+                    let tk = getcookie('token');
+                    let dataParsed = JSON.parse(tk);
                     let response = await instance.post(
                         url,
                         data,
                         isToken
                             ? {
                                   headers: {
-                                      Authorization: `Bearer ${state.userToken}`,
+                                      Authorization: `Bearer ${dataParsed}`,
                                       'Content-Type': contentType,
                                   },
                                   responseType,

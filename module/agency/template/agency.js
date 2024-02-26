@@ -3,19 +3,20 @@ import AgencyBLock from '@/components/Block/index';
 import route from '@/route';
 import { Pagination } from '@nextui-org/react';
 import { useRouter } from 'next/navigation';
-const Index = () => {
+
+const Index = ({ data }) => {
+    let arr = [1, 2];
     const router = useRouter();
-    let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     return (
-        <div className="w-[100%] flex flex-col gap-[24px] mb-[32px] items-center">
-            {arr?.map((i) => {
+        <div className='w-[100%] flex flex-col gap-[24px] mb-[32px] items-center'>
+            {data?.data?.map((item, i) => {
                 return (
-                    <div className="shadow-xs hover:shadow-md w-[100%]" key={i.id} onClick={() => router.push(`${route.agency}/${1}`)}>
-                        <AgencyBLock />
+                    <div className='shadow-sm hover:shadow-md w-[100%]' key={i} onClick={() => router.push(`${route.agency}/${item?.ID}`)}>
+                        <AgencyBLock item={item} />
                     </div>
                 );
             })}
-            <Pagination isCompact showControls total={100} initialPage={1} variant="light" size="lg" color="primary" />
+            <Pagination isCompact showControls total={data?.pagination?.total_pages} initialPage={1} variant='light' size='lg' color='primary' />
         </div>
     );
 };

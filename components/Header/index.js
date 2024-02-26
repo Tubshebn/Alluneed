@@ -51,8 +51,8 @@ const Index = () => {
 
     return (
         <header className='bg-[#ffffff] w-[100%] fixed z-[999] flex items-center justify-center'>
-            <nav className='flex h-[72px] items-center w-[1280px] justify-between max-xl:w-[95%]' aria-label='Global'>
-                <div className='w-[154px] h-[44px] cursor-pointer max-2xl:hidden'>
+            <nav className='flex h-[72px] items-center w-[1280px] justify-between max-xl:w-[80%]' aria-label='Global'>
+                <div className='w-[154px] h-[44px] cursor-pointer max-xl:hidden'>
                     <img src='/assets/icons/mainLogo.svg' alt='LOGO' width={154} onClick={() => router.push(route.home)} />
                 </div>
                 <div className='flex gap-x-8 max-lg:hidden'>

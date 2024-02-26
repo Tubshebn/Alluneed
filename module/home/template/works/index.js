@@ -14,7 +14,7 @@ const Index = () => {
             <div className='flex gap-[32px] max-lg:flex-wrap max-lg:justify-center '>
                 {arr?.map((i) => {
                     return (
-                        <div className='w-[25%] shadow-xl max-lg:w-[45%] max-sm:w-[100%] max-sm:px-[16px] bg-[#FFF]' key={i}>
+                        <div className='w-[25%] shadow-sm max-lg:w-[45%] max-sm:w-[100%] max-sm:px-[16px] bg-[#FFF]' key={i}>
                             <WorkBlock />
                         </div>
                     );
