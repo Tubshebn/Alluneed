@@ -1,5 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Image } from '@nextui-org/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,8 +11,8 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 const Index = () => {
     return (
-        <div className="h-[100%]">
-            <img src="/assets/photo/hottest.png" />
+        <div className='h-[100%]'>
+            <Image src='/assets/photo/hottest.png' className='w-[100vw]' />
             <div>
                 {/* <div className="">
                     <p>

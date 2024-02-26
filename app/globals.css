@@ -16,7 +16,7 @@ body {
 
 @font-face {
     font-family: 'Fixel-black';
-    src: local('Fixel-black'), local('Fixel-black'), url('/fonts/FixelText-medium.woff2') format('woff2'),
+    src: local('Fixel-black'), local('Fixel-black'), url('/fonts/FixelText-Medium.woff2') format('woff2'),
         url('/fonts/FixelText-medium.woff2') format('woff');
     font-style: normal;
     font-display: swap;
@@ -45,4 +45,96 @@ body {
 }
 .mobile-bottom-shadow {
     box-shadow: 0px -4px 12px -2px rgba(16, 24, 40, 0.12);
+}
+
+.dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: red; /* Change the color of the dot */
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.u-loading {
+    width: 128px;
+    height: 128px;
+    display: block;
+    margin: 48px;
+}
+.u-loading__symbol {
+    background-color: #fd3d80;
+    padding: 8px;
+    animation: loading 3s infinite;
+    border-radius: 5px;
+}
+.u-loading__symbol img {
+    display: block;
+    max-width: 100%;
+    animation: loading-icon 3s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+    }
+    15% {
+        background-color: #fd3d80;
+    }
+    16% {
+        background-color: #b44646;
+    }
+    50% {
+        transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+        background-color: #b44646;
+    }
+    65% {
+        background-color: #b44646;
+    }
+    66% {
+        background-color: #fd3d80;
+    }
+    100% {
+        transform: perspective(250px) rotateX(180deg) rotateY(-180deg);
+    }
+}
+@keyframes loading-icon {
+    0% {
+        transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+    }
+    15% {
+        transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+    }
+    16% {
+        transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+    }
+    65% {
+        transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+    }
+    66% {
+        transform: perspective(250px) rotateX(180deg) rotateY(180deg);
+    }
+    100% {
+        transform: perspective(250px) rotateX(180deg) rotateY(180deg);
+    }
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+    padding-left: 30px;
+    padding-right: 30px;
 }

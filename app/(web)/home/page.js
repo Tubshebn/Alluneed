@@ -8,22 +8,22 @@ import Blogs from '@/module/home/template/blogs';
 import Hottest from '@/module/home/template/hottest/index';
 import Hero from '@/components/Hero';
 
-const News = () => {
+const Home = () => {
     return (
         <>
             <Hero imageUrl={'/assets/photo/Hero.png'} />
             <HomeLayout>
-                <h1 className="text-[32px] text-[#000] font-[400] text-center my-[40px] leading-[44px] tracking-[-0.64px]">
-                    Онцгой <span className="text-[32px] text-[#000] font-[700] text-center  leading-[44px] tracking-[-0.64px]">урамшууллууд</span>
+                <h1 className='text-[34px] text-[#000] font-[400] text-center my-[40px] leading-[44px] tracking-[-0.64px]'>
+                    Онцгой <span className='text-[34px] text-[#000] font-[700] text-center  leading-[44px] tracking-[-0.64px]'>урамшууллууд</span>
                 </h1>
                 <Discount />
                 <TopAgency />
                 <Influencers />
                 <Works />
-                <div className="w-[100vw] relative top-[-123px]">
+                <div className='relative w-[99vw] top-[-123px]'>
                     <Hottest />
                 </div>
-                <div className="mb-[64px]">
+                <div className='mb-[100px]'>
                     <Blogs />
                 </div>
             </HomeLayout>
@@ -31,4 +31,4 @@ const News = () => {
     );
 };
 
-export default News;
+export default Home;
