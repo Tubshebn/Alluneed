@@ -5,6 +5,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '@/context/auth/authContext';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar, NavbarMenu } from '@nextui-org/react';
+import { BASE_URL } from '@/service/path';
 const Index = () => {
     const [isHover, setIsHover] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -110,6 +111,7 @@ const Index = () => {
                                 <Avatar
                                     onClick={handlePopover}
                                     name={user?.name?.substring(0, 1)}
+                                    src={`${BASE_URL}/file/${user?.photo1?.file_name || user?.photo2?.file_name || ''}`}
                                     size='md'
                                     isBordered
                                     as='button'
@@ -121,7 +123,7 @@ const Index = () => {
                                     <p className='font-semibold text-[10px]'>Signed in as</p>
                                     <p className='font-semibold text-[10px]'>{user?.name}</p>
                                 </DropdownItem>
-                                <DropdownItem onClick={() => router.push(route.myAccount)}>My account</DropdownItem>
+                                <DropdownItem onClick={() => router.replace(`/${route.myAccount}`)}>My account</DropdownItem>
                                 <DropdownItem onClick={logOut}>Гарах</DropdownItem>
                             </DropdownMenu>
                         </Dropdown>

@@ -21,16 +21,16 @@ const Page = () => {
 
     return (
         <>
-            <div className="relative">
+            <div className='relative'>
                 <Hero imageUrl={'/assets/photo/campaings.png'} />
-                <div className="absolute top-[50%] left-[20%]">
-                    <p className="text-[36px] font-[700] leading-[40px] tracking-[-1.44px] text-[#FFF]">My account</p>
+                <div className='absolute top-[50%] left-[20%]'>
+                    <p className='text-[36px] font-[700] leading-[40px] tracking-[-1.44px] text-[#FFF]'>My account</p>
                 </div>
             </div>
             <MyAccountLayout>
-                <div className="flex space-x-[10%]">
+                <div className='flex space-x-[10%]'>
                     <Tabs TabsArray={TabsArray} setSelected={setSelected} selected={selected} />
-                    <div className="w-full">{selected?.content}</div>
+                    <div className='w-full'>{selected?.content}</div>
                 </div>
             </MyAccountLayout>
         </>
