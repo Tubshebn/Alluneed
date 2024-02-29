@@ -4,9 +4,12 @@ import CampaignsLayout from '@/module/campaigns/layout/main';
 import Hero from '@/components/Hero';
 import Works from '@/module/campaigns/template/campaign';
 import { AuthContext } from '@/context/auth/authContext';
+import axios from 'axios';
+import { BASE_URL } from '@/service/path';
 
 const Campaigns = () => {
     const [data, setData] = useState([]);
+    console.log('🚀 ~ Campaigns ~ data:', data);
     const [loader, setLoader] = useState(false);
     const [page, setPage] = useState(1);
     const {
@@ -23,9 +26,10 @@ const Campaigns = () => {
 
     useEffect(() => {
         setLoader(true);
-        POST('company/list', true, pagination)
+        axios
+            .post(`${BASE_URL}/company/list`, pagination)
             .then((result) => {
-                setData(result);
+                setData(result?.data);
             })
             .catch((err) => {
                 return;
