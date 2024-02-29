@@ -8,7 +8,6 @@ const Dashboard = () => {
     const {
         authState: { user },
     } = useContext(AuthContext);
-    console.log('🚀 ~ Dashboard ~ user:', user?.photo1?.file_path);
     return (
         <div className='flex justify-between w-full p-10 shadow-sm'>
             <div className='flex space-between space-x-[50px] w-[100%]'>

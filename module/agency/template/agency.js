@@ -5,7 +5,6 @@ import { Pagination } from '@nextui-org/react';
 import { useRouter } from 'next/navigation';
 
 const Index = ({ data }) => {
-    let arr = [1, 2];
     const router = useRouter();
     return (
         <div className='w-[100%] flex flex-col gap-[24px] mb-[32px] items-center'>

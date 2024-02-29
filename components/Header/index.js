@@ -57,7 +57,7 @@ const Index = () => {
                     <img src='/assets/icons/mainLogo.svg' alt='LOGO' width={154} onClick={() => router.push(route.home)} />
                 </div>
                 <div className='flex gap-x-8 max-lg:hidden'>
-                    <NavItem href={route.campaigns} text='Company' selected={selectedNavItem === route.campaigns} />
+                    <NavItem href={route.campaigns} text='Campaigns' selected={selectedNavItem === route.campaigns} />
                     <NavItem href={route.news} text='News' selected={selectedNavItem === route.news} />
                     <NavItem href={route.agency} text='Agencies' selected={selectedNavItem === route.agency} />
                     <NavItem href={route.channels} text='Channels' selected={selectedNavItem === route.channels} />
@@ -84,7 +84,7 @@ const Index = () => {
                     } font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute top-[50px]`}
                 >
                     <ul className='py-2 text-sm ' aria-labelledby='dropdownNavbarLink'>
-                        <NavItem href={route.campaigns} text='Company' selected={selectedNavItem === route.campaigns} />
+                        <NavItem href={route.campaigns} text='Campaigns' selected={selectedNavItem === route.campaigns} />
                         <NavItem href={route.news} text='News' selected={selectedNavItem === route.news} />
                         <NavItem href={route.agency} text='Agencies' selected={selectedNavItem === route.agency} />
                         <NavItem href={route.channels} text='Channels' selected={selectedNavItem === route.channels} />

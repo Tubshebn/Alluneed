@@ -63,7 +63,7 @@ body {
     margin: 48px;
 }
 .u-loading__symbol {
-    background-color: #fd3d80;
+    /* background-color: #fd3d80; */
     padding: 8px;
     animation: loading 3s infinite;
     border-radius: 5px;
@@ -79,20 +79,20 @@ body {
         transform: perspective(250px) rotateX(0deg) rotateY(0deg);
     }
     15% {
-        background-color: #fd3d80;
+        /* background-color: #fd3d80; */
     }
     16% {
-        background-color: #b44646;
+        /* background-color: #b44646; */
     }
     50% {
         transform: perspective(250px) rotateX(180deg) rotateY(0deg);
-        background-color: #b44646;
+        /* background-color: #b44646; */
     }
     65% {
-        background-color: #b44646;
+        /* background-color: #b44646; */
     }
     66% {
-        background-color: #fd3d80;
+        /* background-color: #fd3d80; */
     }
     100% {
         transform: perspective(250px) rotateX(180deg) rotateY(-180deg);
