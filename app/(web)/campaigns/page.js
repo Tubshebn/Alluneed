@@ -9,7 +9,6 @@ import { BASE_URL } from '@/service/path';
 
 const Campaigns = () => {
     const [data, setData] = useState([]);
-    console.log('🚀 ~ Campaigns ~ data:', data);
     const [loader, setLoader] = useState(false);
     const [page, setPage] = useState(1);
     const {
