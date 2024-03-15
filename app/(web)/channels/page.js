@@ -138,7 +138,7 @@ const Index = () => {
                 <div className=' w-[100%] grid grid-rows-2 grid-cols-4 gap-10 mt-[40px] justify-center max-md:grid-rows-4 max-md:grid-cols-2 max-md:w-[98%] max-sm:grid-rows-8 max-sm:grid-cols-1 items-center '>
                     {data?.map((i) => {
                         return (
-                            <div className='shadow-md hover:shadow-sm' key={i} onClick={() => router.push(`${route.channels}/${1}`)}>
+                            <div className='shadow-md hover:shadow-sm' key={i} onClick={() => router.push(`${route.channels}/${i?.id}`)}>
                                 <BlogBlock i={i} />
                             </div>
                         );

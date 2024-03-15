@@ -1,3 +1,4 @@
+'use client';
 import DetailCampaigns from '@/components/Detail/detailBlocks';
 import DetailActivity from '@/components/Detail/detailActivity';
 import DetailAds from '@/components/Detail/detailAds';
@@ -13,7 +14,7 @@ const Index = () => {
     } = useContext(AuthContext);
 
     useEffect(() => {
-        GET(`agent/${param?.id}`, true)
+        GET(`channel/${param?.id}`, true)
             .then((result) => {
                 setData(result?.data?.data);
             })
@@ -24,7 +25,7 @@ const Index = () => {
     return (
         <div className=' mt-[97px] w-[80%]'>
             <div className='flex gap-[30px]'>
-                <div className='border-[1px] border-[solid] border-[#EAECF0] shadow-xs w-[70%] h-[80%]'>
+                <div className='border-[1px] border-[solid] border-[#EAECF0] shadow-sm w-[70%] h-[80%]'>
                     <div className='p-[20px]'>
                         <p className='text-[40px] text-[#101828] font-[600] leading-[60px] tracking-[-0.8px] mb-[20px]'>{data?.name}</p>
                         <p className='text-[16px] font-[400] leading-[24px] text-[#475467]'>{data?.description}</p>
@@ -42,7 +43,7 @@ const Index = () => {
                     </div>
                     <DetailActivity data={data?.areas_of_activity} />
                 </div>
-                <div className='border-[1px] border-[solid] border-[#EAECF0] shadow-xs w-[30%] p-[20px] flex flex-col gap-[20px]'>
+                <div className='border-[1px] border-[solid] border-[#EAECF0] shadow-sm w-[30%] p-[20px] flex flex-col gap-[20px]'>
                     <DetailAds />
                 </div>
             </div>

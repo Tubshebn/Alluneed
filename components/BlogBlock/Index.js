@@ -4,7 +4,7 @@ import { BASE_URL } from '@/service/path';
 
 const Index = ({ shadow, i }) => {
     return (
-        <div className={`${shadow} w-[100%] hover:shadow-2xl`}>
+        <div className={`${shadow} w-[100%] hover:shadow-2xl h-[350px]`}>
             <div className='h-[65%]'>
                 <div
                     style={{

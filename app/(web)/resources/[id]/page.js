@@ -1,3 +1,4 @@
+'use client';
 import DetailCampaigns from '@/components/Detail/detailBlocks';
 import DetailActivity from '@/components/Detail/detailActivity';
 import DetailAds from '@/components/Detail/detailAds';

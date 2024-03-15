@@ -9,6 +9,7 @@ import { useParams } from 'next/navigation';
 
 const Index = () => {
     const [data, setData] = useState({});
+    console.log('🚀 ~ Index ~ data:', data);
     const [loader, setLoader] = useState(false);
     const param = useParams();
     const {
@@ -51,7 +52,7 @@ const Index = () => {
                     <div className='p-[20px]'>
                         <DetailInfo data={data} />
                     </div>
-                    <DetailActivity />
+                    <DetailActivity data={data?.brands} />
                 </div>
                 <div className='border-[1px] border-[solid] border-[#EAECF0] shadow-xs w-[30%] p-[20px] flex flex-col gap-[20px]'>
                     <DetailAds />
