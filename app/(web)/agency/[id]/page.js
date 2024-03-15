@@ -9,7 +9,6 @@ import { useParams } from 'next/navigation';
 
 const Index = () => {
     const [data, setData] = useState({});
-    console.log('🚀 ~ Index ~ data:', data);
     const [loader, setLoader] = useState(false);
     const param = useParams();
     const {

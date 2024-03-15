@@ -1,9 +1,8 @@
 'use client';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CampaignsLayout from '@/module/campaigns/layout/main';
 import Hero from '@/components/Hero';
 import Works from '@/module/campaigns/template/campaign';
-import { AuthContext } from '@/context/auth/authContext';
 import axios from 'axios';
 import { BASE_URL } from '@/service/path';
 
@@ -11,9 +10,7 @@ const Campaigns = () => {
     const [data, setData] = useState([]);
     const [loader, setLoader] = useState(false);
     const [page, setPage] = useState(1);
-    const {
-        authFunc: { POST },
-    } = useContext(AuthContext);
+    const [ref, setRef] = useState([]);
 
     let pagination = {
         default_param: [],

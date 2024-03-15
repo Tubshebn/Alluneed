@@ -7,8 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LoadingScreen from './Loading';
 import { useEffect, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
-import route from '@/route';
+import { usePathname } from 'next/navigation';
 
 export default function ParentWrapper({ children }) {
     const { authFunc, authState, authDispatch } = Api();
@@ -18,7 +17,7 @@ export default function ParentWrapper({ children }) {
         setTimeout(() => {
             setLoading(false);
         }, 1000);
-    }, []);
+    }, [path]);
     return (
         <NextUIProvider>
             <AuthContext.Provider value={{ authFunc, authState, authDispatch }}>

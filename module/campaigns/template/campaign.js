@@ -9,10 +9,10 @@ const Index = ({ data, setPage, page }) => {
 
     return (
         <>
-            <div className='my-[48px] grid grid-rows-2 grid-cols-4 gap-10 justify-center cursor-pointer w-full max-md:grid-rows-4 max-md:grid-cols-2 max-md:w-[98%] max-sm:grid-rows-8 max-sm:grid-cols-1'>
+            <div className='my-[48px] grid grid-rows-2 grid-cols-4 gap-10 justify-center cursor-pointer w-full max-md:grid-rows-4 max-lg:grid-cols-2 max-md:w-[98%] max-sm:grid-rows-8 max-sm:grid-cols-1'>
                 {data?.data?.map((el, i) => {
                     return (
-                        <div key={i} className='shadow-sm' onClick={() => router.push(`${route.campaigns}/${1}`)}>
+                        <div key={i} className='shadow-sm' onClick={() => router.push(`${route.campaigns}/${el?.id}`)}>
                             <WorksBlock campaigns='campaign' row={el} />
                         </div>
                     );

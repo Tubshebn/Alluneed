@@ -11,9 +11,10 @@ const Index = ({ campaigns, row }) => {
                     <div
                         style={{
                             backgroundImage: `url(${BASE_URL}/file/${row?.image?.file_name})`,
-                            backgroundSize: '90%',
+                            backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center',
+
                             width: '100%',
                             height: '100%',
                         }}

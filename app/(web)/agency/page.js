@@ -28,15 +28,15 @@ const Agency = () => {
             },
         ],
         filter: [
-            // filter === '1'
-            //     ? null
-            //     : {
-            //           field_name: 'type.id',
-            //           field_type: 'number',
-            //           operation: '=',
-            //           // value: 8,
-            //           values: [filter],
-            //       },
+            filter === '1'
+                ? null
+                : {
+                      field_name: 'type.id',
+                      field_type: 'number',
+                      operation: '=',
+                      value: filter,
+                      //   values: [filter],
+                  },
         ],
         glob_operation: 'string',
         page_no: 0,

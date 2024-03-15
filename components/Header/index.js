@@ -61,10 +61,18 @@ const Index = () => {
                     <NavItem href={route.news} text='News' selected={selectedNavItem === route.news} />
                     <NavItem href={route.agency} text='Agencies' selected={selectedNavItem === route.agency} />
                     <NavItem href={route.channels} text='Channels' selected={selectedNavItem === route.channels} />
-                    <NavItem href='#' text='Influencers' selected={selectedNavItem === '#'} />
+                    <NavItem
+                        href='https://www.sortlist.com/l/mongolia-mn?fbclid=IwAR2V1CslpRy5tlNnJP31e_0qoI7p56sVPDBcSH797pFD14BAPHysv7hUkr0'
+                        text='Influencers'
+                        selected={selectedNavItem === '#'}
+                    />
                     <NavItem href={route.resources} text='Resources' selected={selectedNavItem === route.resources} />
                     <NavItem href={route.events} text='Events' selected={selectedNavItem === route.events} />
-                    <NavItem href={route.marketers} text='Marketers' selected={selectedNavItem === route.marketers} />
+                    <NavItem
+                        href='https://www.sortlist.com/l/mongolia-mn?fbclid=IwAR2V1CslpRy5tlNnJP31e_0qoI7p56sVPDBcSH797pFD14BAPHysv7hUkr0'
+                        text='Marketers'
+                        selected={selectedNavItem === route.marketers}
+                    />
                 </div>
                 <button
                     id='dropdownNavbarLink'
@@ -95,16 +103,6 @@ const Index = () => {
                     </ul>
                 </div>
                 <div className='flex gap-x-[16px]'>
-                    {/* <div className="h-[40px] w-[40px] bg-[#F9FAFB] flex justify-center">
-                        <button>
-                            <img src="/assets/icons/moon-01.svg" alt="dark" />
-                        </button>
-                    </div>
-                    <div className="w-[40px] h-[40px] bg-[#F9FAFB] flex justify-center">
-                        <button>
-                            <img src="/assets/icons/search-md.svg" alt="dark" />
-                        </button>
-                    </div> */}
                     {isLoggedIn ? (
                         <Dropdown>
                             <DropdownTrigger>
