@@ -9,7 +9,7 @@ const Index = ({ shadow, i }) => {
                 <div
                     style={{
                         backgroundImage: `url(${BASE_URL}/file/${i?.image?.file_name})`,
-                        backgroundSize: '90%',
+                        backgroundSize: '100%',
                         backgroundRepeat: 'no-repeat',
                         backgroundPosition: 'center',
                         width: '100%',

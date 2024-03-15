@@ -9,15 +9,6 @@ import route from '@/route';
 import { Pagination } from '@nextui-org/react';
 import { AuthContext } from '@/context/auth/authContext';
 
-let filterArray = [
-    { id: 1, value: '4', label: 'Бүгд' },
-    { id: 2, value: '1', label: 'Маркетинг' },
-    { id: 3, value: '2', label: 'Дизайн' },
-    { id: 4, value: '3', label: 'Сошиал медиа' },
-];
-
-let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
 const Index = () => {
     const [activeRole, setActiveRole] = useState(1);
     const [selectedOption, setSelectedOption] = useState('');
