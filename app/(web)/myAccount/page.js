@@ -8,10 +8,7 @@ import Dashboard from '@/module/myAccount/template/dashboard';
 const TabsArray = [
     { title: 'Dashboard', content: <Dashboard /> },
     { title: 'Orders', content: <Hero /> },
-    { title: 'Downloads', content: <Hero /> },
-    { title: 'Addresses', content: <Hero /> },
     { title: 'Account details', content: <Hero /> },
-    { title: 'Whishlist', content: <Hero /> },
     { title: 'My Event', content: <Hero /> },
     { title: 'Log out', content: <Hero /> },
 ];

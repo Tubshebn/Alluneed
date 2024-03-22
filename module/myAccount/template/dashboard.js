@@ -28,15 +28,15 @@ const Dashboard = () => {
                     <div className='flex items-center gap-4'>
                         <div className='flex items-center gap-2'>
                             <Image src='/assets/icons/youtube.svg' alt='fb' />
-                            <p className='font-[600] leading-[20px] text-[14px] mt-1'>{roundByeThousand(user?.followers)}K</p>
+                            <p className='font-[600] leading-[20px] text-[14px] mt-1'>{roundByeThousand(user?.followers)} K</p>
                         </div>
                         <div className='flex items-center gap-2'>
                             <Image src='/assets/icons/fbColor.svg' alt='fb' />
-                            <p className='font-[600] leading-[20px] text-[14px] mt-1'>{roundByeThousand(user?.followers)}K</p>
+                            <p className='font-[600] leading-[20px] text-[14px] mt-1'>{roundByeThousand(user?.followers)} K</p>
                         </div>
                         <div className='flex items-center gap-2'>
                             <Image src='/assets/icons/twitterColor.svg' alt='fb' />
-                            <p className='font-[600] leading-[20px] text-[14px] mt-1'>{roundByeThousand(user?.followers)}K</p>
+                            <p className='font-[600] leading-[20px] text-[14px] mt-1'>{roundByeThousand(user?.followers)} K</p>
                         </div>
                     </div>
                 </div>

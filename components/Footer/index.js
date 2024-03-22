@@ -9,13 +9,11 @@ const Index = () => {
                     <li className='text-[#EAECF0]'>Танилцуулга</li>
                     <li className='text-[#EAECF0]'>Боломжууд</li>
                     <li className='text-[#EAECF0]'>Үнийн санал</li>
-                    <li className='text-[#EAECF0]'>Ажлын байр</li>
                     <li className='text-[#EAECF0]'>Тусламж</li>
-                    <li className='text-[#EAECF0]'>Нууцлал</li>
                 </ul>
             </div>
             <div className='flex justify-around w-[100%] my-[32px] max-md:flex-col-reverse max-md:items-center'>
-                <div className='text-[#EAECF0]'>Бүх эрх хуулиар хамгаалагдсан © 2077.</div>
+                <div className='text-[#EAECF0]'>Бүх эрх хуулиар хамгаалагдсан © 2024.</div>
                 <ul className='flex  gap-[16px]'>
                     <li className='text-[#EAECF0]'>Журмууд</li>
                     <li className='text-[#EAECF0]'>Нууцлал</li>
