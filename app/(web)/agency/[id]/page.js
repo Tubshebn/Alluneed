@@ -9,7 +9,7 @@ import { useParams } from 'next/navigation';
 
 const Index = () => {
     const [data, setData] = useState({});
-    console.log('🚀 ~ Index ~ data:', data);
+    console.log('agency single  ~ data:', data);
     const [loader, setLoader] = useState(false);
     const param = useParams();
     const {
@@ -21,6 +21,7 @@ const Index = () => {
         GET(`agent/${param?.id}`, true)
             .then((result) => {
                 setData(result?.data?.data);
+                console.log("agency single==========>",result?.data?.data );
             })
             .catch((err) => {
                 return;
@@ -32,9 +33,6 @@ const Index = () => {
 
     return (
         <div className='mt-[120px] mb-[24px] w-[80%]'>
-            <div className='w-[100%] mb-[60px]'>
-                <DetailCampaign />
-            </div>
             <div className='flex gap-[30px]'>
                 <div className='w-[70%] shadow-sm h-[80%]'>
                     <p className='w-[100%] p-[20px] text-[#101828] text-[48px] font-[600] leading-[60px] tracking-[-0.96px]'>{data?.name}</p>

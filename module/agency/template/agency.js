@@ -1,6 +1,5 @@
 'use client';
 import AgencyBLock from '@/components/Block/index';
-import route from '@/route';
 import { Pagination } from '@nextui-org/react';
 import { useRouter } from 'next/navigation';
 
@@ -10,7 +9,8 @@ const Index = ({ data }) => {
         <div className='w-[100%] flex flex-col gap-[24px] mb-[32px] items-center'>
             {data?.data?.map((item, i) => {
                 return (
-                    <div className='shadow-sm hover:shadow-md w-[100%]' key={i} onClick={() => router.push(`${route.agency}/${item?.ID}`)}>
+                    // <div className='shadow-sm hover:shadow-md w-[100%]' key={i} onClick={() => router.push(`${route.agency}/${item?.ID}`)}>
+                    <div className='shadow-sm hover:shadow-md w-[100%]' key={i} >
                         <AgencyBLock item={item} />
                     </div>
                 );

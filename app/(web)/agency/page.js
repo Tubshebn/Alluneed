@@ -9,6 +9,9 @@ import AgencyList from '@/module/agency/template/agency';
 import AgencyLayout from '@/module/agency/layout/main';
 import { useRouter } from 'next/navigation';
 import { AuthContext } from '@/context/auth/authContext';
+//server
+import axios from 'axios';
+import { BASE_URL } from '@/service/path';
 
 const Agency = () => {
     const [filter, setFilter] = useState(4);
@@ -60,16 +63,20 @@ const Agency = () => {
 
     useEffect(() => {
         setLoader(true);
-        POST('agent/list', true, pagination)
-            .then((result) => {
-                setData(result);
-            })
-            .catch((err) => {
-                return;
-            })
-            .finally(() => {
-                setLoader(false);
-            });
+       
+            axios
+                .post(`${BASE_URL}/agent/list`, pagination)
+                .then((result) => {
+                    setData(result?.data);
+            console.log("agency list: ", result?.data);
+
+                })
+                .catch((err) => {
+                    return;
+                })
+                .finally(() => {
+                    setLoader(false);
+                });
     }, [filter]);
 
     useEffect(() => {
@@ -81,6 +88,7 @@ const Agency = () => {
         POST('reference/list', true, FilterPagination)
             .then((result) => {
                 setRef(result?.data);
+                console.log('cats');
             })
             .catch((err) => {
                 return;
@@ -125,7 +133,7 @@ const Agency = () => {
                             </div>
                         ))}
                     </div>
-                    <div className='flex items-end justify-start'>
+                    <div className='flex items-end justify-start test-agency'>
                         <Dropdown selectedOption={selectedOption} handler={handleDropdownChange} />
                     </div>
                 </div>
