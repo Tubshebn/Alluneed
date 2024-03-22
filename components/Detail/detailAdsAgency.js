@@ -8,7 +8,7 @@ const DetailAdsAgency = () => {
                 <iframe
                     width="100%"
                     height="300px"
-                    src="https://www.youtube.com/embed/3yiHZWr6Izc?controls=0&rel=0"
+                    src="https://www.youtube.com/watch?v=Cr0KdqZ954c"
                     frameBorder="0"
                     allowFullScreen
                     loading="lazy"
