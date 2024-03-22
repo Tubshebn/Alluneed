@@ -25,10 +25,10 @@ const Agency = () => {
 
     let pagination = {
         default_param: [
-            {
-                key: 'string',
-                value: 'string',
-            },
+            // {
+            //     key: 'string',
+            //     value: 'string',
+            // },
         ],
         filter: [
             // {
@@ -38,10 +38,10 @@ const Agency = () => {
             //     value: String(filter),
             // },
         ],
-        glob_operation: 'string',
+        // glob_operation: 'string',
         page_no: 0,
-        per_page: 0,
-        sort: 'string',
+        per_page: 10,
+        sort :  "created_at desc"
     };
 
     let FilterPagination = {

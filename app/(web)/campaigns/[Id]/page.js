@@ -9,6 +9,7 @@ import { AuthContext } from '@/context/auth/authContext';
 
 const Index = () => {
     const [data, setData] = useState([]);
+    console.log('data campaigms' , data);
     const { Id } = useParams();
     const {
         authFunc: { GET },
@@ -18,6 +19,7 @@ const Index = () => {
         GET(`${BASE_URL}/company/${Id}`, true)
             .then((result) => {
                 setData(result?.data?.data);
+
             })
             .catch((err) => {
                 return;
