@@ -1,7 +1,6 @@
 'use client';
 import { useContext, useEffect, useState } from 'react';
 import DetailActivity from '@/components/Detail/detailActivity';
-import DetailAds from '@/components/Detail/detailAds';
 import DetailInfo from '@/components/Detail/detailInfo';
 import { AuthContext } from '@/context/auth/authContext';
 import { useParams } from 'next/navigation';
@@ -34,6 +33,14 @@ const Index = () => {
                     <div className='p-[20px]'>
                         <p className='text-[40px] text-[#101828] font-[600] leading-[60px] tracking-[-0.8px] mb-[20px]'>{data?.name}</p>
                         <p className='text-[16px] font-[400] leading-[24px] text-[#475467]'>{data?.description}</p>
+                    </div>
+                    <div className='p-[20px]'>
+                        <p className='text-[16px] font-[400] leading-[24px] text-[#475467]'>{data?.body}</p>
+                        <p className='text-[16px] font-[400] leading-[24px] text-[#475467]'>City: {data?.city}</p>
+                        <p className='text-[16px] font-[400] leading-[24px] text-[#475467]'>Website: {data?.website}</p>
+                        <p className='text-[16px] font-[400] leading-[24px] text-[#475467]'>Address: {data?.address}</p>
+                        <p><a href="mailto:Melojigeq@gmail.com ">Send email</a></p>
+                        <p className='text-[16px] font-[400] leading-[24px] text-[#475467]'><a href="tel:+97699441339">Call</a></p>
                     </div>
                     <div className=' w-[100%]'>
                         <iframe

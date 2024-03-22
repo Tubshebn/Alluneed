@@ -1,14 +1,14 @@
-const DetailAdsAgency = () => {
+const DetailAdsChannel = () => {
     return (
         <>
             <p className="text-[#050514] text-[20px] font-[400] leading-[24px] tracking-[-0.4px]">
-                ADS <span className="text-[#050514] text-[20px] font-[800] leading-[24px] tracking-[-0.4px]">Agencies</span>
+            Space for your ad <span className="text-[#050514] text-[20px] font-[800] leading-[24px] tracking-[-0.4px]">Channel</span>
             </p>
             <div className=" w-[100%]">
                 <iframe
                     width="100%"
                     height="300px"
-                    src="https://www.youtube.com/watch?v=Cr0KdqZ954c"
+                    src="https://ikon.mn/"
                     frameBorder="0"
                     allowFullScreen
                     loading="lazy"
@@ -19,26 +19,16 @@ const DetailAdsAgency = () => {
                 <iframe
                     width="100%"
                     height="300px"
-                    src="https://www.facebook.com/procraft.agency"
+                    src="http://tsag-agaar.gov.mn/"
                     frameBorder="0"
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer"
                 ></iframe>
             </div>
-            <div className=" w-[100%]">
-                <iframe
-                    width="100%"
-                    height="300px"
-                    src="https://www.instagram.com/procraft.agency/?hl=en"
-                    frameBorder="0"
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
-                ></iframe>
-            </div>
+            
         </>
     );
 };
 
-export default DetailAdsAgency;
+export default DetailAdsChannel;
