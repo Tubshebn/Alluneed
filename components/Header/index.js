@@ -61,17 +61,15 @@ const Index = () => {
                     <NavItem href={route.news} text='News' selected={selectedNavItem === route.news} />
                     <NavItem href={route.agency} text='Agencies' selected={selectedNavItem === route.agency} />
                     <NavItem href={route.channels} text='Channels' selected={selectedNavItem === route.channels} />
-                    <NavItem
-                        href='https://www.sortlist.com/l/mongolia-mn?fbclid=IwAR2V1CslpRy5tlNnJP31e_0qoI7p56sVPDBcSH797pFD14BAPHysv7hUkr0'
-                        text='Influencers'
-                        selected={selectedNavItem === '#'}
+                    <NavItem href={route.influencers} text='Influencers' selected={selectedNavItem === route.influencers}
                     />
                     <NavItem href={route.resources} text='Resources' selected={selectedNavItem === route.resources} />
                     <NavItem href={route.events} text='Events' selected={selectedNavItem === route.events} />
                     <NavItem
-                        href='https://www.sortlist.com/l/mongolia-mn?fbclid=IwAR2V1CslpRy5tlNnJP31e_0qoI7p56sVPDBcSH797pFD14BAPHysv7hUkr0'
+                        href='https://www.modash.io/find-influencers/mongolia'
                         text='Marketers'
                         selected={selectedNavItem === route.marketers}
+                        target="_blank"
                     />
                 </div>
                 <button
@@ -96,7 +94,7 @@ const Index = () => {
                         <NavItem href={route.news} text='News' selected={selectedNavItem === route.news} />
                         <NavItem href={route.agency} text='Agencies' selected={selectedNavItem === route.agency} />
                         <NavItem href={route.channels} text='Channels' selected={selectedNavItem === route.channels} />
-                        <NavItem href='#' text='Influencers' selected={selectedNavItem === '#'} />
+                        <NavItem href={route.influencers} text='Influencers' selected={selectedNavItem === route.influencers} />
                         <NavItem href={route.resources} text='Resources' selected={selectedNavItem === route.resources} />
                         <NavItem href={route.events} text='Events' selected={selectedNavItem === route.events} />
                         <NavItem href={route.marketers} text='Marketers' selected={selectedNavItem === route.marketers} />
