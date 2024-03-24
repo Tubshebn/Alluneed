@@ -60,8 +60,8 @@ const Index = () => {
                     <NavItem href={route.campaigns} text='Campaigns' selected={selectedNavItem === route.campaigns} />
                     <NavItem href={route.news} text='News' selected={selectedNavItem === route.news} />
                     <NavItem href={route.agency} text='Agencies' selected={selectedNavItem === route.agency} />
-                    <NavItem href={route.channels} text='Channels' selected={selectedNavItem === route.channels} />
-                    <NavItem href={route.influencers} text='Influencers' selected={selectedNavItem === route.influencers}
+                    <NavItem href={route.channels} text='Traditional Channels' selected={selectedNavItem === route.channels} />
+                    <NavItem href={route.influencers} text='Digital Channels' selected={selectedNavItem === route.influencers}
                     />
                     <NavItem href={route.resources} text='Resources' selected={selectedNavItem === route.resources} />
                     <NavItem href={route.events} text='Events' selected={selectedNavItem === route.events} />
